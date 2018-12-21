@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
+    "allowSyntheticDefaultImports": true,
+    /* Force the strict mode */
+    "alwaysStrict": true,
+    /* Generates corresponding '.d.ts' file. */
+    "declaration": true,
+    /* Add sourcemaps for declarations */
+    "declarationMap": true,
+    /* Report errors for fallthrough cases in switch statement. */
+    "noFallthroughCasesInSwitch": true,
+    /* Report error when not all code paths in function return a value. */
+    "noImplicitReturns": true,
+    /* Report errors on unused locals. */
+    "noUnusedLocals": true,
+    /* Report errors on unused parameters. */
+    "noUnusedParameters": true,
+    /* Our custom folder for types */
+    "typeRoots": ["types", "node_modules/@types"],
+    /* Because we build a library */
+    "skipLibCheck": true,
+    /* Generates corresponding '.map' file. */
+    "sourceMap": true,
+    /* You don't want to be loose! */
+    "strict": true,
+    /* Enable strict checking of function types. */
+    "strictFunctionTypes": true,
+    /* 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'. */
+    "target": "ES3",
+    "lib": ["es2017", "es7", "es6"],
+    "module": "commonjs",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "rootDir": "./"
+  },
+  "exclude": ["node_modules", "dist"]
+}
