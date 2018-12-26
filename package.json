@@ -43,5 +43,12 @@
     "rollup-plugin-typescript2": "^0.18.1",
     "ts-jest": "^23.10.5",
     "typescript": "^3.2.2"
+  },
+  "bugs": {
+    "url": "https://github.com/fabien-h/url/issues"
+  },
+  "homepage": "https://github.com/fabien-h/url#readme",
+  "directories": {
+    "test": "tests"
   }
 }
