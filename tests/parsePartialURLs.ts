@@ -2,11 +2,11 @@
  * Test various url parsing
  */
 (() => {
-  const url = require('../dist_dev/index.js').default;
+  const URL = require('../dist/index.js').default;
 
   describe('Parse partial URLs', () => {
     test('URL with hostname only', () => {
-      expect(url.parse('www.google.com')).toEqual({
+      expect(URL.parse('www.google.com')).toEqual({
         auth: {},
         domain: 'google',
         domainChain: ['com', 'google', 'www'],
@@ -28,7 +28,7 @@
     });
 
     test('URL without protocol', () => {
-      expect(url.parse('//www.google.com/foo.html')).toEqual({
+      expect(URL.parse('//www.google.com/foo.html')).toEqual({
         auth: {},
         domain: 'google',
         domainChain: ['com', 'google', 'www'],

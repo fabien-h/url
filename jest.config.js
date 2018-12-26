@@ -1,7 +1,8 @@
 module.exports = {
-  name: 'url',
+  collectCoverageFrom: ['src/**/*.ts', '!**/node_modules/**'],
   notify: true,
   preset: 'ts-jest',
   testEnvironment: 'node',
-  verbose: false,
+  verbose: true,
+  watchPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/src/'],
 };

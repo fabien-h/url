@@ -1,38 +1,37 @@
 {
+  "typeAcquisition": { "enable": true },
   "compilerOptions": {
-    /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
-    "allowSyntheticDefaultImports": true,
-    /* Force the strict mode */
+    /* Declarations and maps */
     "alwaysStrict": true,
-    /* Generates corresponding '.d.ts' file. */
     "declaration": true,
-    /* Add sourcemaps for declarations */
-    "declarationMap": true,
-    /* Report errors for fallthrough cases in switch statement. */
-    "noFallthroughCasesInSwitch": true,
-    /* Report error when not all code paths in function return a value. */
-    "noImplicitReturns": true,
-    /* Report errors on unused locals. */
-    "noUnusedLocals": true,
-    /* Report errors on unused parameters. */
-    "noUnusedParameters": true,
-    /* Our custom folder for types */
-    "typeRoots": ["types", "node_modules/@types"],
-    /* Because we build a library */
-    "skipLibCheck": true,
-    /* Generates corresponding '.map' file. */
+    "declarationDir": "dist/types",
     "sourceMap": true,
-    /* You don't want to be loose! */
-    "strict": true,
-    /* Enable strict checking of function types. */
-    "strictFunctionTypes": true,
-    /* 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'. */
-    "target": "ES3",
-    "lib": ["es2017", "es7", "es6"],
-    "module": "commonjs",
-    "outDir": "dist",
+    /* Code quality */
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
-    "rootDir": "./"
+    "experimentalDecorators": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    /* Module strategy */
+    "lib": ["es2015", "es2016", "es2017", "dom"],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "target": "es5",
+    /* Folders */
+    "baseUrl": "src",
+    "outDir": "dist/lib",
+    "rootDir": "src",
+    "typeRoots": ["node_modules/@types"]
   },
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "tests", "dist"],
+  "include": ["src"]
 }

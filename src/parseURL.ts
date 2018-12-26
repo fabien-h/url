@@ -1,11 +1,12 @@
 import urlTestRegex from './urlTestRegex';
+import { IURLParsed } from './types';
 
 /**
  * Parse an url to give an object
  *
  * @param url
  */
-const parse = (url: string): URL.IURLParsed | boolean => {
+const parse = (url: string): IURLParsed | boolean => {
   /**
    * Manual check
    */

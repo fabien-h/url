@@ -1,33 +1,43 @@
 {
-  "name": "url",
+  "name": "@acta/url",
   "version": "1.0.0",
-  "description": "Parse urls to objects and objects to urls",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "description": "Parse URLs to formated objects and build URLs from objects.",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es5.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "keywords": [
-    "url parser",
-    "url",
+    "URL parser",
+    "URL",
     "parser"
   ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "scripts": {
-    "build:dev": "parcel src/index.ts --global url --out-dir dist_dev",
-    "build:prod": "parcel build src/index.ts --global url --out-dir dist",
-    "dev": "concurrently \"npm run build:dev\" \"npm run test\" --kill-others --restartTries 2 --restartDelay 200",
-    "test": "jest --watchAll",
-    "tt": "tsc src/index.ts --emitDeclarationOnly --declaration true"
+    "build:dev-watch": "rollup -w --config rollup.config.dev.js",
+    "build": "tsc --module commonjs && rollup --config rollup.config.build.js",
+    "dev": "concurrently \"npm run build:dev-watch\" \"npm run test\" --kill-others --restartTries 2 --restartDelay 200",
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fabien-h/url.git"
   },
-  "author": "https://twitter.com/fabien_huet",
-  "license": "ISC",
+  "author": "Fabien Huet <fabien.huet@gmail.com> (https://wax-o.com)",
+  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^23.3.10",
     "concurrently": "^4.1.0",
     "jest": "^23.6.0",
-    "parcel": "^1.10.3",
-    "parcel-bundler": "^1.10.3",
+    "release-it": "^9.3.0",
+    "rollup": "^0.68.2",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-copy": "^0.2.3",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-typescript2": "^0.18.1",
     "ts-jest": "^23.10.5",
     "typescript": "^3.2.2"
   }

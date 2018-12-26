@@ -2,12 +2,12 @@
  * Test various url parsing
  */
 (() => {
-  const url = require('../dist_dev/index.js').default;
+  const URL = require('../dist/index.js').default;
 
   describe('Format full URLs', () => {
     test('Sample URL with all params', () => {
       expect(
-        url.format({
+        URL.format({
           auth: { password: 'password', username: 'username' },
           domain: 'domain',
           domainChain: ['tld', 'domain', 'subdomain'],
@@ -34,7 +34,7 @@
 
     test('Google homepage', () => {
       expect(
-        url.format({
+        URL.format({
           auth: {},
           domain: 'google',
           domainChain: ['com', 'google', 'www'],
@@ -58,7 +58,7 @@
 
     test('Google search page', () => {
       expect(
-        url.format({
+        URL.format({
           auth: {},
           domain: 'google',
           domainChain: ['com', 'google', 'www'],
@@ -95,7 +95,7 @@
 
     test('Url with an array of params in the query', () => {
       expect(
-        url.format({
+        URL.format({
           auth: {},
           domain: 'example',
           domainChain: ['com', 'example'],

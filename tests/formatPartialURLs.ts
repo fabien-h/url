@@ -2,12 +2,12 @@
  * Test various url parsing
  */
 (() => {
-  const url = require('../dist_dev/index.js').default;
+  const URL = require('../dist/index.js').default;
 
   describe('Format partial URLs', () => {
     test('URL with hostname only', () => {
       expect(
-        url.format({
+        URL.format({
           auth: {},
           domain: 'google',
           domainChain: ['com', 'google', 'www'],
@@ -31,7 +31,7 @@
 
     test('URL without protocol', () => {
       expect(
-        url.format({
+        URL.format({
           auth: {},
           domain: 'google',
           domainChain: ['com', 'google', 'www'],

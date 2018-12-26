@@ -1,7 +1,8 @@
 import format from './formatURL';
 import parse from './parseURL';
+import { IURL } from './types';
 
-const url: URL.IURL = {
+const url: IURL = {
   format,
   parse,
 };

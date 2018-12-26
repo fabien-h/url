@@ -1,13 +1,13 @@
 /**
- * Test various url parsing
+ * Test various URL parsing
  */
 (() => {
-  const url = require('../dist_dev/index.js').default;
+  const URL = require('../dist/index.js').default;
 
   describe('Parse full URLs', () => {
     test('Sample URL with all params', () => {
       expect(
-        url.parse(
+        URL.parse(
           'http://username:password@subdomain.domain.tld:8080/foo/bar/baz?key1=value1&key2=value2#hashvalue',
         ),
       ).toEqual({
@@ -33,7 +33,7 @@
     });
 
     test('Google homepage', () => {
-      expect(url.parse('https://www.google.com/')).toEqual({
+      expect(URL.parse('https://www.google.com/')).toEqual({
         auth: {},
         domain: 'google',
         domainChain: ['com', 'google', 'www'],
@@ -56,7 +56,7 @@
 
     test('Google search page', () => {
       expect(
-        url.parse(
+        URL.parse(
           'https://www.google.com/search?safe=off&source=hp&ei=RpUOXJj4GIzuac3Xq1A&q=test+search&btnK=Recherche+Google&oq=test+search',
         ),
       ).toEqual({
@@ -93,7 +93,7 @@
 
     test('Url with an array of params in the query', () => {
       expect(
-        url.parse(
+        URL.parse(
           'http://example.com/?key1=value1&key2=value2&key2=value3&key3=value1&key3=value2&key3=value3',
         ),
       ).toEqual({

@@ -1,9 +1,11 @@
+import { IURLParsed } from './types';
+
 /**
  * Format an URL string form url object
  *
  * @param urlObject
  */
-const format = (urlObject: URL.IURLParsed) => {
+const format = (urlObject: IURLParsed) => {
   /**
    * Fix the protocol
    * => mailto, sftp and others don't have a //
