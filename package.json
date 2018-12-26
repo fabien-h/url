@@ -26,8 +26,6 @@
     "build": "rimraf dist && tsc --module commonjs && rollup --config rollup.config.build.js",
     "dev": "rimraf dist && concurrently \"npm run build:dev-watch\" \"npm run test:dev\" --kill-others --restartTries 2 --restartDelay 200",
     "release": "npm run build && release-it --dry-run",
-    "test:build": "jest -- --no-cache",
-    "commit": "git add . && npx git-cz",
     "test:dev": "jest --watchAll"
   },
   "repository": {
