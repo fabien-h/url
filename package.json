@@ -16,11 +16,6 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  "release-it": {
-    "github": {
-      "release": true
-    }
-  },
   "scripts": {
     "build:dev-watch": "rollup -w --config rollup.config.dev.js",
     "build": "rimraf dist && tsc --module commonjs && rollup --config rollup.config.build.js",
