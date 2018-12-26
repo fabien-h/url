@@ -2,7 +2,7 @@
  * Test various URL parsing
  */
 (() => {
-  const URL = require('../dist/index.js').default;
+  const URL = require('../dist/index.umd.js');
 
   describe('Parse full URLs', () => {
     test('Sample URL with all params', () => {

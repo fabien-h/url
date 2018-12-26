@@ -71,10 +71,12 @@ const formatedURL = URL.format({
 
 ```
 
-## Dev
-
-Scripts :
+## Dev scripts:
 
 - `npm run dev` to dev (build, test and watch)
 - `npm run build` to build the production version
 - `npm run release` to release a new version. Relies on [release-it](https://github.com/webpro/release-it) for deployments.
+
+To develop in local using the package from another application or package, go for a symlink:
+
+    npm link /the/absolute/path/url

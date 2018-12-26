@@ -16,11 +16,19 @@
   "engines": {
     "node": ">=8.0.0"
   },
+  "release-it": {
+    "github": {
+      "release": true
+    }
+  },
   "scripts": {
     "build:dev-watch": "rollup -w --config rollup.config.dev.js",
-    "build": "tsc --module commonjs && rollup --config rollup.config.build.js",
-    "dev": "concurrently \"npm run build:dev-watch\" \"npm run test\" --kill-others --restartTries 2 --restartDelay 200",
-    "test": "jest --watchAll"
+    "build": "rimraf dist && tsc --module commonjs && rollup --config rollup.config.build.js",
+    "dev": "rimraf dist && concurrently \"npm run build:dev-watch\" \"npm run test:dev\" --kill-others --restartTries 2 --restartDelay 200",
+    "release": "npm run build && release-it --dry-run",
+    "test:build": "jest -- --no-cache",
+    "commit": "git add . && npx git-cz",
+    "test:dev": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -30,9 +38,11 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^23.3.10",
+    "commitizen": "^3.0.5",
     "concurrently": "^4.1.0",
     "jest": "^23.6.0",
     "release-it": "^9.3.0",
+    "rimraf": "^2.6.2",
     "rollup": "^0.68.2",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-copy": "^0.2.3",

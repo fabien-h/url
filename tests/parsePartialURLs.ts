@@ -2,7 +2,7 @@
  * Test various url parsing
  */
 (() => {
-  const URL = require('../dist/index.js').default;
+  const URL = require('../dist/index.umd.js');
 
   describe('Parse partial URLs', () => {
     test('URL with hostname only', () => {
