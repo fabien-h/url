@@ -31,7 +31,6 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^23.3.10",
-    "commitizen": "^3.0.5",
     "concurrently": "^4.1.0",
     "jest": "^23.6.0",
     "release-it": "^9.3.0",

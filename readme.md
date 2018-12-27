@@ -2,7 +2,15 @@
 
 Parse URLs to formated objects and build URLs from objects.
 
+## Table of Contents
+
+- [Parsing URLs](#parsing-urls)
+- [Formating URLs](#formating-urls)
+- [Dev scripts](#dev-scripts)
+
 ## Parsing URLs
+
+<sup>[back to ToC &uarr;](#table-of-contents)</sup>
 
 You can parse an URL that way:
 
@@ -38,7 +46,9 @@ const parsedURL = URL.parse('http://username:password@subdomain.domain.tld:8080/
 
 When an element is missing, its value is `null` (ex without hash: `hash: null`).
 
-## Formating an URL
+## Formating URLs
+
+<sup>[back to ToC &uarr;](#table-of-contents)</sup>
 
 You can format an URL that way:
 
@@ -71,7 +81,9 @@ const formatedURL = URL.format({
 
 ```
 
-## Dev scripts:
+## Dev scripts
+
+<sup>[back to ToC &uarr;](#table-of-contents)</sup>
 
 - `npm run dev` to dev (build, test and watch)
 - `npm run build` to build the production version
