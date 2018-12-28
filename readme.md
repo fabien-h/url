@@ -3,7 +3,7 @@
 
 # URL @acta/url
 
-Parse URLs to formated objects and build URLs from objects.
+To parse URLs to formated objects and build URLs from objects.
 
 ## Table of Contents
 
@@ -92,6 +92,6 @@ const formatedURL = URL.format({
 - `npm run build` to build the production version
 - `npm run release` to release a new version. Relies on [release-it](https://github.com/webpro/release-it) for deployments.
 
-To develop in local using the package from another application or package, go for a symlink:
+To develop in local using the package from another application or package, go for a symlink: `npm link /the/absolute/path/url`.
 
-    npm link /the/absolute/path/url
+To publish: `npm publish --access=public`.
