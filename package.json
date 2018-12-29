@@ -1,6 +1,6 @@
 {
   "name": "@acta/url",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Parse URLs to formated objects and build URLs from objects.",
   "main": "dist/index.umd.js",
   "module": "dist/index.es5.js",
