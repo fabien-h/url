@@ -24,6 +24,6 @@ export interface IURLParsed {
 }
 
 export interface IURL {
-  readonly parse: (url: string) => IURLParsed | boolean;
+  readonly parse: (url: string) => IURLParsed | false;
   readonly format: (urlObject: IURLParsed) => string;
 }

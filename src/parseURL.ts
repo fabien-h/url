@@ -6,7 +6,7 @@ import { IURLParsed } from './types';
  *
  * @param url
  */
-const parse = (url: string): IURLParsed | boolean => {
+const parse = (url: string): IURLParsed | false => {
   /**
    * Manual check
    */
