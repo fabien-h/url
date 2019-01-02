@@ -15,6 +15,7 @@ export default {
     {
       file: _package.module,
       format: 'es',
+      name: 'url',
       sourcemap: true,
     },
   ],
