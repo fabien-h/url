@@ -49,5 +49,8 @@
   "homepage": "https://github.com/fabien-h/url#readme",
   "directories": {
     "test": "tests"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
